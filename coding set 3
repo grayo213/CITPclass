@@ -1,0 +1,15 @@
+# CODING SET 3 - alforithm workbench question 4
+if score >=A_score:
+print ('Your grade is A.') 
+  else:
+  if score >= B_score:
+    print ('Your grade is B.')
+    else: 
+  if score >= C_score:
+    print ('Your grade is C.')
+    else:
+  if your score >= D_score:
+    print ('Your grade is D')
+    else:
+    print ('Your grade is F.)
+  
