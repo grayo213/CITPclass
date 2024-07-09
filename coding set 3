@@ -12,4 +12,36 @@ print ('Your grade is A.')
     print ('Your grade is D')
     else:
     print ('Your grade is F.)
-  
+
+# Question 5
+if amount1 > 10:
+if amount 2> amount 2:
+  print: ("Greater amount:", amount1)
+else: print("Greater amount:", amount2)
+else: 
+print("amount2 is not less than 100")
+else: 
+print("amount1 ia not greater than 10")
+#programming exercises
+#question 1
+day_number = int(input("Enter a number between 1 and 7: "))
+
+#determine the day of week based on input 
+if day_number == 1:
+  day_name = "Monday"
+elif day_number == 2:
+  day_name = "Tuesday"
+elif day_number == 3:
+  day_name == "Wednesday"
+elif day_number == 4:
+  day_name == "Thursday"
+elif  day_number == 5:
+  day_name == "Friday"
+elif day_number == 6:
+  day_namee = "Saturday"
+elif day+number == 7:
+  day_name == "Sunday"
+else:
+  day_name = "Invalid input: the number must be between 1 and 7:"
+# display the results 
+print("corresponding day of the week:" day_name)
