@@ -31,6 +31,7 @@ day_number = int(input("Enter a number between 1 and 7: "))
 if day_number == 1:
   day_name = "Monday"
 elif day_number == 2:
+
   day_name = "Tuesday"
 elif day_number == 3:
   day_name == "Wednesday"
@@ -55,3 +56,88 @@ print("corresponding day of the week:" day_name)
 #Function is to calculate weight in newtons
 def calulate_weight(mass):
   weight = mass * 9.8
+  return weight 
+
+#program 15
+def main():#Ask the user to enter the mass of the objects 
+mass = float (input("Enter the mass of the object in kiloograms: "))
+
+# calulate the weight using the formula
+weight = calculate_weight(mass)
+
+#Display the weight
+print (f"The weight of the object is {weight} newrtons.")
+
+#Give feedback based on weigth
+if weigth > 500:
+print ("This object is too heavy.")
+  elif weight < 100:
+print (This objec is too light.")
+
+#excute main funtion
+if __name__ == "__main__":
+main()
+
+#the "calulate_weight" function is taking mass as a parameter and calulating the weight using the formula - weight = mass * 9.8, then it gives us the calulated weight, the the main prgorma whcih is lines 61-63 are me trying to prompt the user to enter the mass of the object in kilograms using the unput 
+# then after using the input, we convert it to gloat using the vairble "mass"
+
+#   i tried to make it so the program calulates the weight of an object based on the mass
+
+# question 15
+
+# first we are creating a table basically, listing out and settin up all the numbers and amounts 
+
+def convert_seconds (seconds):
+  days = seconds // 86400
+  seconds %= 86400
+  hours = seconds // 3600
+  seconds %= 3600
+  minutes = seconds // 60 
+  seconds %= 60 
+return days, hours, minutes, seconds
+
+#above i am also showing the conversions of how many seconds are in a minute and so on 
+
+#input from user 
+seconds = int(input)"Enter the number of seconds: "))
+
+#Convert seconds 
+days. hours, minutes, remaining_seconds = convert_seconds(seconds)
+
+#Display the results 
+
+if days > 0:
+  print:(f"{days} days, {hours} hours, {minutes} minutes, {remaining_seconds} seconds")
+elif hours > 0 >:
+  print:(f", {hours} hours, {minutes}, minutes, {remaining_seconds} seconds")
+elif minutes > 0: 
+  print (f"{minutes} minutes, {remaining_seconds} seconds")
+else: 
+  print(f{remainin_seconds} seconds")
+
+#problem 16
+def if_leap_year
+#leap year rules:
+  #1. divisible by 4
+  #2. not divisible by 100, unless also divisible by 400
+if year % 4 == 0:
+    if year % 4 == 0:
+if year % 400 == 0:
+return True
+  else:
+return TRUE
+else: 
+rerurn FALSE
+
+def days_in_February(year):
+if is_leap_year(year):
+return 29
+else: return 28 
+
+#input from user 
+year = int(input("Enter a year: "))
+
+# calulate and print the number of days in Feburary for the given year 
+days = days_infebruary(year)
+print (f"Number of days in February {years} is: {days}")
+
