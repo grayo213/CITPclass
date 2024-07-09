@@ -22,6 +22,7 @@ else:
 print("amount2 is not less than 100")
 else: 
 print("amount1 ia not greater than 10")
+
 #programming exercises
 #question 1
 day_number = int(input("Enter a number between 1 and 7: "))
@@ -45,3 +46,12 @@ else:
   day_name = "Invalid input: the number must be between 1 and 7:"
 # display the results 
 print("corresponding day of the week:" day_name)
+
+# on line 27 I am having the user enter a number and have it converted into an integer 
+# in the end I a having the user print the program that corresponds the day of the week bases on the users input ot the error of the messafe - this is the output 
+
+#question 5
+
+#Function is to calculate weight in newtons
+def calulate_weight(mass):
+  weight = mass * 9.8
