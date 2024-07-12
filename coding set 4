@@ -1,0 +1,108 @@
+# Algorithm workbench
+#question 1
+# start off with the product to a value that ensures the loop starts 
+product = 0 
+  # loop as long as product is less than 100
+  while product < 100
+
+  # grab the input from the user what they put in
+  number = float (input("Enter a number: "))
+  # multiply the number by 10 and assign it to the given product 
+
+  product = number * 10 
+
+  #that is my trying to create the loop to calulate the inputs user 
+
+  #print the results below
+  print(f"The product is {product}")
+#I want this message to appear wehn the loop ends
+  print("The product is now 100 or greater. Loop ended.")
+
+  # question 2
+
+  wile True:
+#get two numbers from the users input
+number1 = float(input("Enter the first number:))
+number2 = float(input("Enter the second number: "))
+
+  #calulate the sum of them 
+
+  sum = number1 + number2
+
+  #display and show the sum
+
+  #Display the sun
+  print(f"The sum of {number1} andf {number2} is {sum}")
+
+#ask the user if they wish to perform the operation once again 
+
+repeat = input(Do you wish to perform the operation again?)(yes/no(: 
+
+  # Check if the user wants to stop and end the loop 
+
+  if repeat != 'yes':
+    print("Terminating the loop.")
+  break
+
+#programming excersise
+
+#question 1 - the bug 
+
+  #start the totalt number of bugs to 0 
+  total_bugs = 0
+
+  #create the loop for 5 days
+
+  for dat in range (1,6):
+  #have the user for the number of bugs collected for the day 
+  bugs_cllected = int(input(f"Enter the number of bugs collected on the day{day}:))
+
+  #add the number of bugs collected to the total verall
+  total_bugs += bugs_collected
+
+#show the total number of bugs that are collected
+
+print(f"The total number of bugs collected over 5 dyas is {total number of bugs})
+
+
+  # question 4 - distance traveled 
+
+  # get the speed of the vehicle in miles per hour 
+  speed = float(input("Enter the speed of the vehicle in miler per hour:"))
+  # then i am going ot try and get the number of hours the vehicle has traveled 
+
+  time = int(input("Enter the number of hours the vehicle has traveled: "))
+  print("/n
+
+  #question 11 - weight loss
+
+  #grab the users starting weight 
+
+  starting_weight = float(input("Enter your starting weight (in pounds):"))
+
+  #next define the weight loss per month
+  print ("/nMonth/tExpected Weight (lbs)")
+  print ("---")
+
+  # that is me trying to show what and where the user inputs 
+
+  #calulate and show the expected weight for each month 
+
+  current_weight = starting=weight
+  for month in range (1,7):
+  current_weight -= weight_loss_per_month
+  print(f"{month/t{current_weight:.2f})
+
+  #question 14
+
+  #first we define the number of ros for the patterne 
+
+  rows = 7
+  # use the nested loops to generate the pattern 
+
+
+  for i in [7, 5, 4, 3, 2, 1]:
+    for j in range (i):
+print('*', end= '')
+print ()
+# then have it ove the next line each row
