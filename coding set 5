@@ -8,8 +8,23 @@ def times_10(x):
   times_10(-2)
   times_10(0)
 
-  'times_10(5)'
+  print('times_10(5)')
   
+# above I tried to display the action I made on line 11 - But i am not sure why it wont print, or maybe I am clickling the wrong thing  
+# in lines 2-4 I defined what the problem 
+# the function I made is me tyring to multiply the argument x by 10 
+
+#algorith workbench number 2
+
+show_value(12)
+ #the function aboce is the single parameter the 'quantity'
+# i am going to call the function and then write it out 
+def show_value(quanity):
+  print("The value is:", quantity)
+
+show_value(12)
+#the output of this code shoudl be the value which is 12 
 
 
   
+
