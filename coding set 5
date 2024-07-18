@@ -1,0 +1,15 @@
+#algorithm workbench 
+def times_10(x):
+  result = x * 10 
+  print(f"{x} multiplued by 10 is: {results}")
+
+  #Example
+  times_10(5)
+  times_10(-2)
+  times_10(0)
+
+  'times_10(5)'
+  
+
+
+  
