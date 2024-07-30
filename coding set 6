@@ -1,0 +1,9 @@
+#algorithm workbench 
+#1 
+#Open a file names 'my_name.txt' in write mode 
+  with open('my_name.txt', 'w') as files:
+#Write my name to the file 
+file.write('I love to code even though it is hard') 
+  
+# the file is automatically closed after the 'with' block ends  
+  
