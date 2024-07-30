@@ -2,8 +2,25 @@
 #1 
 #Open a file names 'my_name.txt' in write mode 
   with open('my_name.txt', 'w') as files:
-#Write my name to the file 
-file.write('I love to code even though it is hard') 
-  
+  #Write my name to the file 
+  file.write('I love to code even though it is hard') 
 # the file is automatically closed after the 'with' block ends  
-  
+#for line 3 i am opening the file by using the file named 'my_name.txt' in write mode (''w''), then the with statment is making sure the file is closed correctly adter the block of code is printed and executed
+# i am trying to go more in depth with my explainations and iterations, hopefully these are better
+# I call the 'open' file so it opends the file in the specific mode. This is indicating that the file is opened for writing like I want it to be  
+#the the 'write' operation is the 'file.write('I love to code even though it is hard' and that is the operation of writing the text i put in the quotes
+#the lastly the close file enures that the files closes, it is the 'with' block and makes it so it automaticaly closes at the end 
+#6
+# Open the file names 'number_list.txt' in append mode 
+with open('number_list.txt', 'a') as file: 
+  # Write a list of numbers to the file 
+  numbers = [1, 2, 3, 4, 5] 
+  for numbers in numbers: 
+    file.write(f{number}/n) # Wrtie each number on a new line 
+
+# The file is automtically closed after the 'with' block ends 
+#the 'open' file is called witht the mode ''a'' to make sure that it will stick witht he file similar to number one above with calling the name 'my_name.txt' 
+#then is writes the operation, 'for' loop iterates the list 'numbers'. Then for each the numbers they are written to the file then followed by the new charachter
+# I chose to open the file in the begining simialr to how I did in the first answer 
+# Programming Excercises - Questions 1,6,9 and random 
+
