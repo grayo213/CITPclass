@@ -22,5 +22,136 @@ with open('number_list.txt', 'a') as file:
 #the 'open' file is called witht the mode ''a'' to make sure that it will stick witht he file similar to number one above with calling the name 'my_name.txt' 
 #then is writes the operation, 'for' loop iterates the list 'numbers'. Then for each the numbers they are written to the file then followed by the new charachter
 # I chose to open the file in the begining simialr to how I did in the first answer 
+
 # Programming Excercises - Questions 1,6,9 and random 
+#1
+#Open the file named 'numbers.txt', 'r') as file: 
+with open('numbers.txt', 'r') as file: 
+  #read all lines from the file 
+  lines = file.readlines()
+
+#Iterate over each liine in the list of lines 
+for line in lines: 
+  #Strip any leading/trailing whitespace and print the number 
+  print(line.strip())
+#the 'open()' funciton is used to open the file in read mode. 
+#then the 'file.readlines()' reads all of the context of the file and returns it as a list of lines 
+#then we have the 'for' loop which processes each element (line) in the 'lines' I made it so it is a string that represents each line from the file 
+lastly the 'print' line makes it easier and prints each integer on a new line and makes the output clean 
+the output of the code should be 10,20,30,40, and 50 if the 'numbers.txt' are 10,20,30,40, and 50 
+
+#6
+def calulate_average(filename):
+  try: 
+      #Open the file named 'filename' in read mode 
+      with open (filename, 'r') as file: 
+        #Read all lines from the file 
+        lines = file.readlines()
+      #Initialize variables to store the sum and count of numbers 
+        total_sum = 0 
+        count = 0 
+
+    #Iterate over each line in the list of lines 
+    for line in lines: 
+        # Strip any leading/trailing whitespace and try to convert the line to an integer 
+        try: 
+          number = int(line.strip())
+          total_sum += number
+          count += 1 
+      except ValueError: 
+        #Hanadle lines that are not integers 
+        print(f"Warning: Skipping non-integer line:  '{line.strip()}'") 
+    #Calulate the average if there are numbers 
+    if count > 0: 
+    average = total_sum / count 
+      print(f"The average of the numbers is: {average}")
+  else:
+    print("No valid numbers found to calculate the average/")
+
+  except FileNotFoundError:
+    print(f"The file '{fioename}' was not found.")
+  except IOError: 
+    print("An error occured while reading the file.")
+
+#Call the function witht he filename 'numbers.txt'
+calulate_average('numbers.txt')
+
+#the 'lines = file.readlines()' is reading all the lines from the file into a list of named 'lines'. then each line is a string representing a line from the file 
+# for accumulating the sum and count i sturggled at first but then figrued it outby haveing the line successfully converted to an integer, it is then added to 'total sum' and 'count' is incremented by 1
+# the calulating average is after processing all the lines, it is calulated as 'total_sum / count '. 
+
+#9 
+def calculate_average(filename):
+    try:
+       # Open the file named 'filename' in read mode
+      with open(filename, 'r') as file:
+            # Read all lines from the file
+            lines = file.readlines()
+
+       # Initialize variables to store the sum and count of numbers
+        total_sum = 0
+        count = 0
+
+        # Iterate over each line in the list of lines
+        for line in lines:
+            try:
+                # Strip any leading/trailing whitespace and convert to an integer
+                number = int(line.strip())
+                total_sum += number
+                count += 1
+            except ValueError:
+              # Handle lines that cannot be converted to an integer
+                print(f"Warning: Skipping non-integer line: '{line.strip()}'")
+
+        # Calculate the average if there are numbers
+        if count > 0:
+            average = total_sum / count
+            print(f"The average of the numbers is: {average}")
+        else:
+            print("No valid numbers found to calculate the average.")
+
+    except FileNotFoundError:
+        print(f"The file '{filename}' was not found.")
+    except IOError:
+        print("An error occurred while opening or reading the file.")
+
+# Call the function with the filename 'numbers.txt'
+calculate_average('numbers.txt')
+
+# So above i copied the code that I ad just made in #6 and made some varations to it 
+#I added the the "FileNotFoundError' and is is made for when the file does not exist like it asked 
+#Then 'IOError' is when the error occurs for the file operation and when and error message is printed
+
+#3 
+defe display_lines_with_numbers(filename):
+  try: 
+    # Open the file named 'filename' in read mode 
+    with open(filename, 'r') as file:
+      # Read all lines from the file 
+      lines = file.readlines()
+
+  # Display each line with its line number 
+    for i, line in enumerate(lines, start=1):
+      print(f"{i}: {line.strip()}")
+
+    except FileNotFoundError:
+      print(f"The file '{filename}' was not found.")
+    except IOError: 
+      print("An error occired while opening or reading the file.")
+
+#Ask the user for the name of the file 
+
+filename = input("Enter the name of the file to display: ") 
+display_lines_with_ numbers(filename)
+
+#the 'def display_lines_with_numbers_(filename):' is a function that takes the filename as an argument and handles the file reading and line displaying  
+# when the code runs it should display as follows 
+  first line 
+  second line 
+  third line 
+#then the output should be 
+1: first line 
+2: second line 
+3: third line 
+
 
