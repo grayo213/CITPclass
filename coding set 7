@@ -1,0 +1,197 @@
+#Algotithm Workbench 
+#1
+  #Create a list with the specified strings 
+    scientists = ['Einstein', 'Newton', 'Copernicus', 'Kepler']
+  #Print the list 
+  print(scientists)
+
+# i chose to do this problem because it was simply enough for me to easily understand but also learn from it 
+#the code should output this once it is told to print 'scientists' 
+Einstein, Newton, Copernicus, Kepler 
+
+# 2
+#Define the list of names 
+  names ["Olivia", "Laila", "Lucas", "Gabriel"]
+#Loop through each element in the list and print it 
+for name in names: 
+  print(name) 
+    #this code used simiple list that we deifned as name
+    #then i wrote out the names of my siblings and used 'for' as the loop to iterate over each element in the 'names' list 
+#the output should look like this: 
+    Olivia
+    Laila
+    Lucas
+    Gabriel 
+#Programming Exercises - 1, 14, and 2 random 
+
+#1 
+
+  # Initialize an empty list to store sales data
+sales = []
+
+# List of days of the week
+days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+# Ask the user to input sales for each day of the week
+print("Please enter the store sales for each day of the week:")
+
+for day in days_of_week:
+    while True:
+        try:
+            # Get input from user
+            amount = float(input(f"Enter sales for {day}: $"))
+            sales.append(amount)
+            break
+        except ValueError:
+            # Handle invalid input
+            print("Invalid input. Please enter a numerical value.")
+
+# Calculate total sales
+total_sales = sum(sales)
+
+# Display the results
+print("\nSales for the week:")
+for day, amount in zip(days_of_week, sales):
+    print(f"{day}: ${amount:.2f}")
+
+print(f"\nTotal sales for the week: ${total_sales:.2f}")
+# I sturgged with this code in the begining because it is specif but I think i figured it out 
+  # I chose to start with initalizaing so it starts at an empty list the 'sales' 
+  # then the list creats the store sales amount 
+  #the program then goes off what the user inputs, they then put in the sales for each day, and then the total calulations are created 
+  #the function 'sum'() calulates the total sales from the list of sales figures 
+
+#14
+#i struggled while doing this one, so this is my best go at it 
+
+#initialize disctionaries to store expenses 
+categories = []
+amounts = []
+
+#read the data 
+with open('expenses.txt', 'r') as file: 
+  for line in file: 
+    #spilt the line into category and amount 
+    cateegory, amount = line.strip(). split(':')
+    #add category and amount to the list 
+    categories.append(category)
+    amounts.append(float(amount))
+
+#create a pie chart 
+plt.figure(figsize=(8,6))
+plt.pie(amounts, labels=categories, autopct='%1.1f%', startle=140)
+plt.title('Expenses for Last Month') 
+plt.show()
+
+  #i had a hard time figuring out how to create the pue chart so i had to ask Chatgpt for a help and looked at the book a little 
+#i put the 'ecpenses.txt' in read mode so each line in the file, can spilt into the category and amount based on the '':'' seperator 
+
+#6 larger than n
+#
+def display_greater_than(numbers_list, n):
+  " " "
+  Displays all the numbers in the list that are greater than n. 
+
+
+  Args: 
+  number_list (list of floar or int): The list of numbers to check. 
+  n (float or int): The number to compare against. 
+  " " "
+  #Iterate through each number in the list 
+    for number in number_list:
+      #Check if the number is greater than n 
+      if number > n: 
+        #Print the number if it is greater than n 
+        print(number)
+
+numbers = [5, 12, 7, 3, 9, 10]
+  n = 8 
+display_greater_than(numbers, n) 
+  # the function is 'display_greater_than(numbers_list, n)' and it is meant to take a list and a number as parameters 
+# i did an example after the code, showing what the function would look like and then the output after 
+
+# 7 driver's license exam 
+
+#studnet text file
+  'students_answers.txt'
+
+
+def read_answers_from_file(filename):
+    """
+    Reads student answers from a text file and returns them as a list.
+
+    Args:
+    filename (str): The path to the text file containing the student answers.
+
+    Returns:
+    list of str: The list of student answers.
+    """
+    with open(filename, 'r') as file:
+        answers = [line.strip() for line in file]
+    return answers
+
+def grade_exam(correct_answers, student_answers):
+    """
+    Grades the exam by comparing student answers with correct answers.
+
+    Args:
+    correct_answers (list of str): The list of correct answers.
+    student_answers (list of str): The list of student answers.
+
+    Returns:
+    dict: A dictionary containing the results of grading.
+    """
+    results = {
+        'correct_count': 0,
+        'incorrect_count': 0,
+        'incorrect_questions': []
+    }
+
+    for i in range(len(correct_answers)):
+        if student_answers[i] == correct_answers[i]:
+            results['correct_count'] += 1
+        else:
+            results['incorrect_count'] += 1
+            results['incorrect_questions'].append(i + 1)  # Question numbers start from 1
+
+    return results
+
+def display_results(results):
+    """
+    Displays the results of grading.
+
+    Args:
+    results (dict): The dictionary containing the results of grading.
+    """
+    print(f"Total Correct Answers: {results['correct_count']}")
+    print(f"Total Incorrect Answers: {results['incorrect_count']}")
+
+    if results['correct_count'] >= 15:
+        print("The student passes the exam.")
+    else:
+        print("The student fails the exam.")
+
+    if results['incorrect_questions']:
+        print(f"Questions with Incorrect Answers: {', '.join(map(str, results['incorrect_questions']))}")
+
+# Correct answers as provided
+correct_answers = [
+    'A', 'C', 'A', 'A', 'D', 'B', 'C', 'A', 'C', 'B',
+    'A', 'D', 'C', 'A', 'D', 'C', 'B', 'B', 'D', 'A'
+]
+
+# Read student answers from the file
+student_answers = read_answers_from_file('student_answers.txt')
+
+# Grade the exam
+results = grade_exam(correct_answers, student_answers)
+
+# Display results
+display_results(results)
+
+#this was the hardest code for me to do  I think 
+# first I started with creating the txt.file with all of the answer for the exam 
+#then I set it up with the file named, then i put it so the program would know how mnay questions the user can get wrong for them to pass or fail 
+#then the print shows what to display to the user based on their test result, showing if they passed or failed 
+
+
