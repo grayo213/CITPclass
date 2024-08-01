@@ -1,0 +1,11 @@
+#1 
+#Open a file names 'my_name.txt' in write mode 
+  with open('my_name.txt', 'w') as files:
+  #Write my name to the file 
+  file.write('I love to code even though it is hard') 
+# the file is automatically closed after the 'with' block ends  
+#for line 3 i am opening the file by using the file named 'my_name.txt' in write mode (''w''), then the with statment is making sure the file is closed correctly adter the block of code is printed and executed
+# i am trying to go more in depth with my explainations and iterations, hopefully these are better
+# I call the 'open' file so it opends the file in the specific mode. This is indicating that the file is opened for writing like I want it to be  
+#the the 'write' operation is the 'file.write('I love to code even though it is hard' and that is the operation of writing the text i put in the quotes
+#the lastly the close file enures that the files closes, it is the 'with' block and makes it so it automaticaly closes at the end 
