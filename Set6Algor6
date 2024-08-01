@@ -1,0 +1,12 @@
+6
+# Open the file names 'number_list.txt' in append mode 
+with open('number_list.txt', 'a') as file: 
+  # Write a list of numbers to the file 
+  numbers = [1, 2, 3, 4, 5] 
+  for numbers in numbers: 
+    file.write(f{number}/n) # Wrtie each number on a new line 
+
+# The file is automtically closed after the 'with' block ends 
+#the 'open' file is called witht the mode ''a'' to make sure that it will stick witht he file similar to number one above with calling the name 'my_name.txt' 
+#then is writes the operation, 'for' loop iterates the list 'numbers'. Then for each the numbers they are written to the file then followed by the new charachter
+# I chose to open the file in the begining simialr to how I did in the first answer 
